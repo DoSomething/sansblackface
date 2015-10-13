@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: #F7F7F7;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
@@ -10,24 +14,38 @@ body {
 }
 
 #page {
+  height: 100%;
   text-align: center;
+  position: relative;
+}
+
+.container {
+  display: table;
+  margin: 0 auto;
   padding: 1em;
+  position: relative;
+  top: 50%;
+
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .answer {
   color: #4E2B63;
+  display: block;
   font-family: 'Lobster', cursive;
-  font-size: 7em;
-  margin: 1em 24px 0.5em;
+  font-size: 9em;
+  line-height: 0.8;
+  margin: 0 0 24px;
 }
 
 .cta {
   font-size: 24px;
-  padding: 24px;
 }
 
 .cta__message {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .button {
@@ -35,25 +53,39 @@ body {
   border-radius: 4px;
   color: #fff;
   display: inline-block;
-  padding: 13px 24px 10px;
+  font-weight: 700;
+  padding: 12px 24px 10px;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-@media (min-width: 500px) {
+.button:hover {
+  background-color: #55c7fc;
+}
+
+
+@media (orientation: portrait) {
+  .answer {
+    margin-bottom: 0.5em;
+  }
+}
+
+
+@media (min-width: 550px) {
 
   .answer {
-    font-size: 10em;
+    font-size: 15em;
+    margin-bottom: 0.75em;
   }
 
 }
+
 
 @media (min-width: 1000px) {
 
   .answer {
     font-size: 20em;
     margin-bottom: 0.5em;
-    margin-top: 0.3em;
   }
 
 }
